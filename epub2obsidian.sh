@@ -14,7 +14,7 @@ PROGRAMS="perl awk pandoc"
 
 for program in $PROGRAMS
 do
-    which $program &> /dev/null || echo "$program not found"
+    which $program &> /dev/null || { echo "$program not found"; exit; }
 done
 
 
